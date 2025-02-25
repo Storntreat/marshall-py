@@ -15,7 +15,7 @@ newChar = 0
 temp = ""
 while i < len(string):
     if ord(string[i]) in range(65, 91):
-        newChar = ord(string[i]) + shift
+        newChar = ord(string[i]) - shift
         if newChar > 90:
             newChar -= 26
         elif newChar < 65:
