@@ -1,7 +1,7 @@
 point = 0
 word = input("Please input a string: ")
 for i in range(len(word)):
-        if word[i] in "bcdfghjklmnpqrstvwxyz":
+        if word[i].isalpha and not word[i] in "aeiou" and not word[i] in "AEIOU":
             point += 5
         elif word[i] in "aeiou":
             point += 1
@@ -24,7 +24,7 @@ while True:
     if point <= lowPoint:
         lowPoint = point
         lowest = word
-    elif point >= highPoint:
+    if point >= highPoint:
         highest = word
         highPoint = point
     word = input("Next string: ")
