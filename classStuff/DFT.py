@@ -20,8 +20,8 @@ def dft(x):
 # Perform DFT
 X_dft = dft(signal)
 
-print("Signal:", signal)
-print("DFT Result:", X_dft)
+print(f"Signal: {signal}")
+print(f"DFT Result: {X_dft}")
 
 # Visualizing the Magnitudes
 plt.figure(figsize=(10, 5))
