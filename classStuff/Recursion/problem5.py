@@ -15,5 +15,20 @@ def max(n):
             return max(n[1:])
         else:
             return max(n[1:])
+        
+def maxTail(n, i=0, maximum=0):
+    if len(n) == 0:
+        return maximum
+    elif i == len(n)-1:
+        return maximum
+    else: 
+        if n[i] > maximum:
+            maximum = n[i]
+        else:
+            return maxTail(n,i+1,maximum)
+
 maxA = max(a_list)
+maxB = maxTail(a_list)
 print(maxA)
+print(maxB)
+
