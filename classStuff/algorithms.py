@@ -39,7 +39,8 @@ def bubble(array):
         swap = False
         for i in range(1, len(array)):
             if array[i] < array[i-1]:
-                array[i], array[i-1] == array[i-1], array[i]
+                array[i], array[i-1] = array[i-1], array[i]
+                swap = True
     return array
 
 #insertion sort
@@ -50,7 +51,7 @@ def insertion(array):
         for i in range(1, len(array)):
             for j in range(i, 0, -1):
                 if array[j-1] > array[j]:
-                    array[j-1], array[j] == array[j], array[j-i]
+                    array[j-1], array[j] = array[j], array[j-i]
                 else: 
                     break
     return array
